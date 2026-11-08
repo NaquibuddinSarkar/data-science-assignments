@@ -1,37 +1,52 @@
 # Data Science Coursework and Practice Portfolio
 
-This repository separates two kinds of material:
+This repository separates original course materials and assignments from supplementary practice examples added to extend the portfolio.
 
-1. **Original course materials and assignments** — these should retain their course context, original filenames, datasets and attribution.
-2. **Supplementary practice examples** — new, self-authored examples added to extend the portfolio and demonstrate reproducible analytical workflows.
+> **Coursework import status:** the uploaded course bundle was curated into a separate GitHub-ready package of 61 files (including 24 notebooks). Those exact original files have not yet been imported here. The material currently committed under supplementary-practice is newly authored practice, not represented as submitted course work.
 
-> **Current status:** the original course ZIP was curated into a 61-file package (including 24 notebooks), but those original files have **not yet been copied into this GitHub repository**. The files currently committed here are the supplementary examples listed below. This distinction is intentional; supplementary examples are not being presented as submitted coursework.
+## Original supplementary notebooks
 
-## Supplementary practice currently in this repository
+The notebook collection is intended to work in JupyterLab, VS Code and Google Colab. Click any notebook below to preview it on GitHub; the COLAB_GUIDE.md explains how to open notebooks in Colab and how to share your own Colab work for review.
 
-### Jupyter notebooks
-
-| Notebook | Main topics |
+| Notebook | Course topic |
 |---|---|
-| [01 Python foundations](supplementary-practice/notebooks/07_python_foundations.ipynb) | Python types, functions, control flow, exceptions |
-| [02 Pandas data cleaning](supplementary-practice/notebooks/08_pandas_data_cleaning.ipynb) | Missing values, duplicates, joins, groupby, pivot |
-| [03 Customer EDA and KPIs](supplementary-practice/notebooks/01_customer_eda_and_kpis.ipynb) | Data quality, segmentation, business metrics |
-| [04 Visualisation storytelling](supplementary-practice/notebooks/02_visualization_storytelling.ipynb) | Distributions, category comparisons, relationships |
-| [05 A/B testing](supplementary-practice/notebooks/03_ab_testing_and_hypothesis_testing.ipynb) | Two-proportion tests, confidence intervals, Welch test |
-| [06 Regression pipeline](supplementary-practice/notebooks/04_machine_learning_regression_pipeline.ipynb) | Preprocessing, Random Forest, cross-validation, metrics |
-| [07 Classification evaluation](supplementary-practice/notebooks/09_classification_model_evaluation.ipynb) | Logistic regression, Random Forest, ROC-AUC, precision/recall |
-| [08 Customer clustering](supplementary-practice/notebooks/10_customer_segmentation_clustering.ipynb) | Scaling, K-Means, silhouette, PCA |
-| [09 Prophet forecasting](supplementary-practice/notebooks/05_prophet_time_series_forecasting.ipynb) | Weekly/yearly seasonality, seasonal-naive baseline, MAE/RMSE |
-| [10 SARIMAX forecasting](supplementary-practice/notebooks/11_sarimax_forecasting_comparison.ipynb) | Seasonal-naive benchmark, SARIMAX, holdout evaluation |
-| [11 Energy demand analytics](supplementary-practice/notebooks/06_energy_demand_analytics.ipynb) | Synthetic meter data, load profile, Random Forest regression |
+| [01 Customer EDA and KPIs](supplementary-practice/notebooks/01_customer_eda_and_kpis.ipynb) | EDA, segmentation and business metrics |
+| [02 Visualisation storytelling](supplementary-practice/notebooks/02_visualization_storytelling.ipynb) | Distributions, comparisons and relationships |
+| [03 A/B testing](supplementary-practice/notebooks/03_ab_testing_and_hypothesis_testing.ipynb) | Hypothesis tests, confidence intervals and effect size |
+| [04 Regression pipeline](supplementary-practice/notebooks/04_machine_learning_regression_pipeline.ipynb) | Preprocessing, Random Forest and cross-validation |
+| [05 Prophet forecasting](supplementary-practice/notebooks/05_prophet_time_series_forecasting.ipynb) | Seasonality and chronological holdout validation |
+| [06 Energy demand analytics](supplementary-practice/notebooks/06_energy_demand_analytics.ipynb) | Synthetic meter data and load prediction |
+| [07 Python foundations](supplementary-practice/notebooks/07_python_foundations.ipynb) | Python functions, control flow and validation |
+| [08 Pandas data cleaning](supplementary-practice/notebooks/08_pandas_data_cleaning.ipynb) | Missing data, joins, grouping and pivots |
+| [09 Classification evaluation](supplementary-practice/notebooks/09_classification_model_evaluation.ipynb) | Logistic regression, Random Forest and ROC-AUC |
+| [10 Customer clustering](supplementary-practice/notebooks/10_customer_segmentation_clustering.ipynb) | K-Means, scaling, silhouette score and PCA |
+| [11 SARIMAX forecasting](supplementary-practice/notebooks/11_sarimax_forecasting_comparison.ipynb) | Seasonal naive and SARIMAX benchmarking |
+| [12 Advanced statistics](supplementary-practice/notebooks/12_advanced_statistics_practical.ipynb) | Welch t-test, ANOVA, correlations, chi-square, regression and Bayes |
+| [13 Advanced ML and ensembles](supplementary-practice/notebooks/13_advanced_ml_model_selection_ensembles.ipynb) | Ridge/Lasso, cross-validation, bagging, boosting, voting and stacking |
+| [14 PySpark workflow](supplementary-practice/notebooks/14_big_data_pyspark_workflow.ipynb) | Spark DataFrames, lazy evaluation, joins, windows and Parquet |
+| [15 Attention for time series](supplementary-practice/notebooks/15_attention_mechanism_for_time_series.ipynb) | Query-Key-Value and scaled dot-product attention |
+| [16 Production monitoring](supplementary-practice/notebooks/16_production_monitoring_and_safe_rollout.ipynb) | Drift, freshness, calibration, monitoring layers and safe rollout |
 
-### API deployment example
+## Applied assignment briefs
 
-The [FastAPI deployment example](supplementary-practice/deployment/) contains a training script, a prediction API, requirements and run instructions. It uses the sample Iris dataset and is an educational example, not a production service.
+New exercises based on the course content are available in [assignments/](assignments/README.md):
 
-## Running the supplementary notebooks
+1. [Energy demand forecasting](assignments/assignment_01_energy_forecasting.md)
+2. [Production monitoring and safe rollout](assignments/assignment_02_production_monitoring.md)
+3. [Big-data transaction analytics with PySpark](assignments/assignment_03_pyspark_analytics.md)
+4. [Model selection and ensemble benchmarking](assignments/assignment_04_ensemble_benchmarking.md)
 
-Install the packages from the supplementary folder:
+These are practice briefs, not answers to the course's graded assignments.
+
+## Model deployment and CI/CD
+
+The [FastAPI deployment example](supplementary-practice/deployment/) includes model training, a prediction API, endpoint tests and a Dockerfile. A GitHub Actions workflow at [.github/workflows/deployment-demo-ci.yml](.github/workflows/deployment-demo-ci.yml) runs on pushes to main, pull requests and manual dispatch. It uses Python 3.12, installs the deployment demo's requirements and runs pytest.
+
+The Docker demonstration is local and educational. It does not deploy to AWS ECS/Fargate or Docker Hub automatically.
+
+## Install
+
+For the general notebooks:
 
 ```bash
 python -m venv .venv
@@ -40,20 +55,24 @@ python -m venv .venv
 pip install -r supplementary-practice/requirements.txt
 ```
 
-Open the notebooks in JupyterLab, VS Code or Google Colab. Prophet can require additional platform-specific dependencies; consult the Prophet installation guidance if installation fails.
+For PySpark, install the optional dependencies:
 
-For the API example, follow [its README](supplementary-practice/deployment/README.md) and install its separate requirements file.
+```bash
+pip install -r supplementary-practice/requirements-big-data.txt
+```
+
+For the FastAPI deployment demo, follow the folder-specific instructions in [its README](supplementary-practice/deployment/README.md).
+
+## Colab and your existing notebooks
+
+See [COLAB_GUIDE.md](COLAB_GUIDE.md). I do not have a direct connection to your private Colab runtime or Drive, but can inspect and improve notebooks you upload as .ipynb files or share through an accessible link.
 
 ## Data, testing and interpretation
 
-- Supplementary notebooks generate synthetic datasets locally. These records are not actual customer, employee, utility or BUET research observations.
-- The notebooks are instructional examples. They have not all been executed end-to-end in a clean environment.
-- Forecasting and machine-learning results on synthetic data are not evidence of real-world model performance.
-- For applied research, replace synthetic data with a documented, permitted dataset; preserve chronological splits for time series; compare against simple baselines; and report limitations.
-- Do not publish course datasets or other third-party material unless redistribution is permitted.
-- Preserve course instructions, source citations and attribution when adding the original coursework package.
-
-## Prepared coursework package
-
-A separate GitHub-ready archive was prepared from the uploaded course bundle. It contains 61 files, including 24 notebooks, datasets, scripts and documentation organised into seven topic folders. It is **not yet committed to this repository**. Once those original files are imported, they should remain clearly separated from `supplementary-practice/`.
+- Supplementary notebooks generate synthetic datasets. They do not represent real customers, employees, companies, utilities or BUET thesis observations.
+- Notebook JSON structure has been checked; the notebooks have not all been executed end-to-end in a clean environment.
+- Scores on synthetic data are not evidence of real-world performance.
+- For applied work, document data source and licence, define prediction targets, prevent leakage, compare with simple baselines and report uncertainty and limitations.
+- Do not publish third-party or course-provided datasets unless redistribution is permitted.
+- Preserve course attribution and context when importing your original course exercises.
 
