@@ -22,6 +22,8 @@ This folder contains original practice material added separately from the upload
 | 14_big_data_pyspark_workflow.ipynb | Spark DataFrames, lazy evaluation, joins, windows and Parquet |
 | 15_attention_mechanism_for_time_series.ipynb | Query-Key-Value attention and weighted context |
 | 16_production_monitoring_and_safe_rollout.ipynb | Data drift, freshness, calibration, monitoring layers and safe rollout |
+| 17_factor_analysis_and_multiple_regression.ipynb | Factor analysis, multiple regression, VIF and residual diagnostics |
+| 18_pv_degradation_and_waste_forecasting.ipynb | Weibull lifetime modelling, degradation, cohorts and synthetic waste projections |
 
 ## General installation
 
