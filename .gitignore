@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test / build output
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+
+# Generated model artefacts
+*.pkl
+*.joblib
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
