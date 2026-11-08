@@ -17,9 +17,8 @@ build/
 dist/
 *.egg-info/
 
-# Generated model artefacts
-*.pkl
-*.joblib
+# Generated model artefact from the supplementary API example
+/supplementary-practice/deployment/iris_model.joblib
 
 # OS/editor noise
 .DS_Store
