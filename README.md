@@ -35,8 +35,13 @@ New exercises based on the course content are available in [assignments/](assign
 2. [Production monitoring and safe rollout](assignments/assignment_02_production_monitoring.md)
 3. [Big-data transaction analytics with PySpark](assignments/assignment_03_pyspark_analytics.md)
 4. [Model selection and ensemble benchmarking](assignments/assignment_04_ensemble_benchmarking.md)
+5. [CI/CD, Docker and rollback](assignments/assignment_05_ci_cd_docker_and_rollback.md)
 
 These are practice briefs, not answers to the course's graded assignments.
+
+## Course alignment
+
+See [COURSE_ALIGNMENT.md](COURSE_ALIGNMENT.md) for a topic-by-topic map from the uploaded course slides and assignments to the notebooks, practice briefs and deployment examples.
 
 ## Model deployment and CI/CD
 
@@ -65,7 +70,7 @@ For the FastAPI deployment demo, follow the folder-specific instructions in [its
 
 ## Colab and your existing notebooks
 
-See [COLAB_GUIDE.md](COLAB_GUIDE.md). I do not have a direct connection to your private Colab runtime or Drive, but can inspect and improve notebooks you upload as .ipynb files or share through an accessible link.
+See [COLAB_GUIDE.md](COLAB_GUIDE.md). Example: [open the PV forecasting notebook in Google Colab](https://colab.research.google.com/github/NaquibuddinSarkar/data-science-assignments/blob/main/supplementary-practice/notebooks/18_pv_degradation_and_waste_forecasting.ipynb). I do not have a direct connection to your private Colab runtime or Drive, but can inspect and improve notebooks you upload as .ipynb files or share through an accessible link.
 
 ## Data, testing and interpretation
 
