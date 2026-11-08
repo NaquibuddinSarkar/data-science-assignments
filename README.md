@@ -40,3 +40,8 @@ These materials are presented as coursework and practical exercises. They should
 06-time-series-forecasting/
 07-model-deployment/
 ```
+
+
+## Additional original practice
+
+The [supplementary-practice](./supplementary-practice/) folder contains additional self-authored forecasting examples, separate from the course-provided assignments. It includes a Prophet walkthrough and a Holt-Winters/SARIMAX comparison using reproducible synthetic data. See that folder's README for setup and limitations.
